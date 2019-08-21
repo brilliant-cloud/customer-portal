@@ -25,14 +25,14 @@ class SideNav extends React.Component {
           <Menu.Item key="overview">
             <Link to="/console/overview">
               <i className={(styles.fa) + " " + "fa fa-tachometer fa-lg"}>
-                总览
+                Overview
               </i>
             </Link>
           </Menu.Item>
 
           <SubMenu
             key="compute"
-            title={<i className={(styles.fa) + " " + "fa fa-server fa-lg"}>计算</i>}
+            title={<i className={(styles.fa) + " " + "fa fa-server fa-lg"}>Compute</i>}
           >
             <Menu.Item
               key="instances"
@@ -41,7 +41,7 @@ class SideNav extends React.Component {
                 <div
                   className={styles.item}
                 >
-                  云主机
+                  Instances
                 </div>
               </Link>
             </Menu.Item>
@@ -51,7 +51,7 @@ class SideNav extends React.Component {
                 <div
                   className={styles.item}
                 >
-                  硬盘
+                  Volumes
                 </div>
               </Link>
             </Menu.Item>
@@ -61,7 +61,7 @@ class SideNav extends React.Component {
                 <div
                   className={styles.item}
                 >
-                  镜像
+                  Images
                 </div>
               </Link>
             </Menu.Item>
@@ -69,14 +69,14 @@ class SideNav extends React.Component {
 
           <SubMenu
             key="net"
-            title={<i className={(styles.fa) + " " + "fa fa-sitemap fa-lg"}>网络</i>}
+            title={<i className={(styles.fa) + " " + "fa fa-sitemap fa-lg"}>Networks</i>}
           >
             <Menu.Item key="networks">
                 <Link to="/console/networks">
                   <div
                     className={styles.item}
                   >
-                    网络
+                    Networks
                   </div>
                 </Link>
             </Menu.Item>
@@ -86,7 +86,7 @@ class SideNav extends React.Component {
                 <div
                   className={styles.item}
                 >
-                  路由器
+                  Routers
                 </div>
               </Link>
             </Menu.Item>
@@ -100,13 +100,13 @@ class SideNav extends React.Component {
 
           <SubMenu
             key="security"
-            title={<i className={(styles.bolt) + " " + "fa fa-bolt fa-lg"}>安全</i>}
+            title={<i className={(styles.bolt) + " " + "fa fa-bolt fa-lg"}>Security</i>}
           >
             <Menu.Item key="secgroup">
               <div
                 className={styles.item}
               >
-                安全组
+                Security Group
               </div>
             </Menu.Item>
 
@@ -115,7 +115,7 @@ class SideNav extends React.Component {
                 <div
                   className={styles.item}
                 >
-                  SSH密钥
+                  SSH KeyPairs
                 </div>
               </Link>
             </Menu.Item>

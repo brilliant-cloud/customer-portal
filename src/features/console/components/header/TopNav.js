@@ -20,11 +20,11 @@ class TopNav extends React.Component {
       <div>
         <Link to='/'>
           <span className={styles.logo}>
-            42cloud
+            Brilliant Cloud
           </span>
         </Link>
         <span className={styles.logout} onClick={this.handleLogout}>
-          登出
+          Sign Out
         </span>
       </div>
     )
