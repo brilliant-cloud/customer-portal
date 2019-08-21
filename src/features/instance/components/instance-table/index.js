@@ -65,13 +65,17 @@ class InstanceTable extends React.Component {
             )
           }
         } else if (col === 'image') {
+          /*
           render = (text, record) => {
             return (
               <Link to={'/console/images/' + record.image.id}>
                 <span>{text.name}</span>
               </Link>
             )
-          }
+
+           */
+          console.log()
+
         } else if (col === 'security_groups') {
           render = (text) => {
             if (text) {

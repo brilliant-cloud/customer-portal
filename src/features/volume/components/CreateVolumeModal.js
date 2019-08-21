@@ -47,6 +47,7 @@ class CustomizeForm extends React.Component {
                visible={this.props.visible}
                onCancel={this.handleCancel}
                onOk={this.handleOk}
+               cancelText="cancel"
         >
           <Form>
             <FormItem label="Name: ">
@@ -61,7 +62,7 @@ class CustomizeForm extends React.Component {
               )}
             </FormItem>
 
-            <FormItem label="Type：">
+            <FormItem label="Type：" >
               {getFieldDecorator('type')(
                 <RadioGroup>
                   {radioElements}

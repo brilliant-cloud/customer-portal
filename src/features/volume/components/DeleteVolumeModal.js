@@ -41,7 +41,7 @@ class DeleteVolumeModal extends React.Component {
 
         <Alert
           message="Warning"
-          description={`You have chosen a hard drive【${namesArr}】，You sure you want to delete it?`}
+          description={`You have chosen 【${namesArr}】，You sure you want to delete it?`}
           type="warning"
           showIcon
         />
