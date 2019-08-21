@@ -20,7 +20,7 @@ class DeleteVolumeModal extends React.Component {
 
   handleCancel = () => {
     this.props.handleModalCancel('delete', false)
-  }
+  };
 
   render() {
     let namesArr = [];
@@ -31,8 +31,9 @@ class DeleteVolumeModal extends React.Component {
     }
 
     return(
-      <Modal title="删除硬盘"
-             okText="删除"
+      <Modal title="Delete Hard Drive"
+             okText="Delete"
+             cancelText="Cancel"
              onCancel={this.handleCancel}
              visible={this.props.visible}
              onOk={this.handleOk}
@@ -40,7 +41,7 @@ class DeleteVolumeModal extends React.Component {
 
         <Alert
           message="Warning"
-          description={`你选择了硬盘【${namesArr}】，确定要删除吗?`}
+          description={`You have chosen a hard drive【${namesArr}】，You sure you want to delete it?`}
           type="warning"
           showIcon
         />

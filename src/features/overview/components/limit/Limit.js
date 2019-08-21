@@ -21,28 +21,28 @@ class Limit extends React.Component {
           <Col xs={12} md={12} xl={6}>
           <LimitCard data={quotaSetData.instances}
                      colorKey='instances'
-                     kind="云主机"
+                     kind="Instances"
           />
           </Col>
 
           <Col xs={12} md={12} xl={6}>
           <LimitCard data={quotaSetData.cores}
                      colorKey='cores'
-                     kind="CPU核"
+                     kind="CPU Cores"
           />
           </Col>
 
           <Col xs={12} md={12} xl={6}>
           <LimitCard data={quotaSetData.ram}
                      colorKey='ram'
-                     kind="内存"
+                     kind="RAM"
           />
           </Col>
 
           <Col xs={12} md={12} xl={6}>
           <LimitCard data={quotaSetData.security_groups}
                      colorKey='securityGroups'
-                     kind="安全组"
+                     kind="Security Groups"
           />
           </Col>
         </Row>

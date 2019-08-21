@@ -42,7 +42,7 @@ class Graph extends React.Component {
         </div>
       )
     } else {
-      // 网络上的云主机
+
       let servers = this.props.servers;
       let networks = this.props.networks;
       let mapNetworkIDToServer = {};
@@ -66,7 +66,7 @@ class Graph extends React.Component {
       });
 
 
-      // 内网端口，存放端口相关子网的id
+
       let interfacePortsArr = [];
       let routerInterfacePorts = this.props.routerInterfacePorts;
       routerInterfacePorts.items.forEach(id => {
@@ -76,7 +76,7 @@ class Graph extends React.Component {
       });
 
 
-      // 子网
+
       let subnetsArr = [];
       let subnets = this.props.subnets;
       subnets.items.forEach(id => {
@@ -86,7 +86,7 @@ class Graph extends React.Component {
       });
 
 
-      // 网络
+
       let networkIDArr = [];
       subnetsArr.forEach(item => {
         networkIDArr.push(item.network_id);
@@ -94,7 +94,7 @@ class Graph extends React.Component {
       networkIDArr = uniqueArr(networkIDArr);
 
 
-      // 网络、子网以及云主机
+
       let networkNodeArr = [];
       networkIDArr.forEach(networkID => {
         let subnetNodeArr = [];

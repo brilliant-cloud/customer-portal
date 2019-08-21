@@ -6,7 +6,7 @@ const ormItems = (arr, key = 'id') => {
   return [getItems(arr, key), getItemsById(arr, key)];
 };
 
-// arr 是一个对象数组，返回由所有对象的 key 的键值组成的新数组
+
 const getItems = (arr, key = 'id') => {
   let items = [];
   arr.forEach(item => {
@@ -15,7 +15,7 @@ const getItems = (arr, key = 'id') => {
   return items;
 };
 
-// arr 是一个对象数组
+
 const getItemsById = (arr, key = 'id') => {
   let itemsById = {};
   arr.forEach(item => {
@@ -24,7 +24,7 @@ const getItemsById = (arr, key = 'id') => {
   return itemsById;
 };
 
-// 数组去重
+
 const uniqueArr = (arr) => {
   return arr.filter((item, index, arr) => arr.indexOf(item) === index);
 };

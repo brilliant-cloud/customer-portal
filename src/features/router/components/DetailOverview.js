@@ -21,7 +21,7 @@ function DetailOverview(props) {
     let router = props.router.data;
     return (
       <div className={styles.overview}>
-        <div className={styles.title}>路由器详情</div>
+        <div className={styles.title}>Router Details</div>
 
         <div className={styles.basic}>
           <p>

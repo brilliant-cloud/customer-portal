@@ -31,10 +31,10 @@ class DetailOverview extends React.Component {
 
       let serverInfo = this.props.server.data;
 
-      // 镜像
+
       let imageName = this.props.images.itemsById[serverInfo.image.id].name;
 
-      // 网络
+
       let networkArrs = [];
       let addressKeys = Object.keys(serverInfo.addresses);
       addressKeys.forEach(key => {
@@ -59,15 +59,15 @@ class DetailOverview extends React.Component {
         }
       });
 
-      // 密钥对
+
       let keyName = '';
       if (serverInfo.key_name) {
         keyName = serverInfo.key_name;
       } else {
-        keyName = '无';
+        keyName = 'no';
       }
 
-      // 安全组
+
       let securityGroupsArr = [];
       if (serverInfo.security_groups.length > 0) {
         let securityGroupsName = [];
@@ -83,16 +83,17 @@ class DetailOverview extends React.Component {
       } else {
         securityGroupsArr.push(<dl key="null">
           <dt>{INSTANCE_FIELD['security_groups']}</dt>
-          <dd>无</dd>
+          <dd>no</dd>
         </dl>)
       }
 
       return (
         <div className={styles.overview}>
-          <div className={styles.title}>云主机详情</div>
+          <div className={styles.title}>
+            Cloud Host Details</div>
 
           <div className={styles.basic}>
-            <div className={styles.subtitle}>基本信息</div>
+            <div className={styles.subtitle}>Basic Information</div>
             <dl>
               <dt>{INSTANCE_FIELD['name']}</dt>
               <dd>{serverInfo.name}</dd>
@@ -108,7 +109,8 @@ class DetailOverview extends React.Component {
           </div>
 
           <div className={styles.flavor}>
-            <div className={styles.subtitle}>配置规格</div>
+            <div className={styles.subtitle}>
+              Configuration Specification</div>
             <dl>
               <dt>{FLAVOR_FIELD['name']}</dt>
               <dd>{flavorsInfo.name}</dd>
@@ -124,12 +126,13 @@ class DetailOverview extends React.Component {
           </div>
 
           <div className={styles.addresses}>
-            <div className={styles.subtitle}>IP地址</div>
+            <div className={styles.subtitle}>IP Address</div>
             {networkArrs}
           </div>
 
           <div className={styles.security}>
-            <div className={styles.subtitle}>安全配置</div>
+            <div className={styles.subtitle}>
+              Security Configuration</div>
             <dl>
               <dt>{INSTANCE_FIELD['key_name']}</dt>
               <dd>{keyName}</dd>

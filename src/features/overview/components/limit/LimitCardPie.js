@@ -48,27 +48,25 @@ const getOption = (data, colorKey) => {
       name: 'Line 1',
       type: 'pie',
 
-      // 是否顺时针排布
+
       clockWise: true,
 
-      // 饼图的内半径
+
       radius: [30, 35],
 
-      // 图形样式，有 normal 和 emphasis 两个状态。
-      // normal 是图形在默认状态下的样式；
-      // emphasis 是图形在高亮状态下的样式
+
       itemStyle: dataStyle,
 
-      // 是否开启 hover 在扇区上的放大动画效果
+
       hoverAnimation: false,
 
       data: [{
         value: data.in_use,
-        name: '已用',
+        name: 'Used',
         itemStyle: usedHolderStyle
       }, {
         value: data.limit - data.in_use,
-        name: '未用',
+        name: 'Unused',
         itemStyle: unusedHolderStyle
       }]
     }]

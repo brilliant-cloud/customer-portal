@@ -26,7 +26,7 @@ class InstanceTable extends React.Component {
     super(props);
   }
 
-  // 选择列表项时的处理函数
+
   handleSelectChange = (selectedRowKeys, selectedRows) => {
     this.props.dispatch(choosedInstance(selectedRows));
   };
@@ -46,12 +46,12 @@ class InstanceTable extends React.Component {
         </div>
       )
     } else {
-      // 列表项选择配置
+
       const rowSelection = {
         onChange: this.handleSelectChange,
       };
 
-      // 表格列的描述数据
+
       let columns = [];
       INSTANCE_TABLE_COLUMN.forEach(col => {
         let sorter, render, className;
@@ -102,7 +102,7 @@ class InstanceTable extends React.Component {
               )
             } else {
               return (
-                <div>无</div>
+                <div>no</div>
               )
             }
           }
@@ -138,7 +138,7 @@ class InstanceTable extends React.Component {
       });
 
 
-      // 表格数据
+
       let servers = this.props.servers;
       let flavors = this.props.flavors;
       let images = this.props.images;

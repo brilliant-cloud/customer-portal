@@ -27,7 +27,7 @@ class ConsoleLog extends React.Component {
         });
       } else {
         logNode.push(
-          <div key="null">暂无日志</div>
+          <div key="null">No Log Available</div>
         )
       }
       return (

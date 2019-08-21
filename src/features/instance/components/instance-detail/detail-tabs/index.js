@@ -49,21 +49,21 @@ class DetailTabs extends React.Component {
         onTabClick={this.handleTabClick}
         className={styles.detailtabs}
       >
-        <TabPane tab="控制台日志" key="log">
+        <TabPane tab="Console Log" key="log">
           <ConsoleLog />
         </TabPane>
 
-        <TabPane tab="监控" key="monitor">
+        <TabPane tab="Monitor" key="monitor">
           <RadioGroup
             defaultValue="1hour"
             onChange={this.handleChangeRadio}
           >
-            <RadioButton value="1hour">最近一小时</RadioButton>
-            <RadioButton value="6hours">最近六小时</RadioButton>
-            <RadioButton value="1day">最近一天</RadioButton>
-            <RadioButton value="1month">最近一个月</RadioButton>
-            <RadioButton value="6months">最近六个月</RadioButton>
-            <RadioButton value="1year">最近一年</RadioButton>
+            <RadioButton value="1hour">Last Hour</RadioButton>
+            <RadioButton value="6hours">Last Six Hours</RadioButton>
+            <RadioButton value="1day">Last Day</RadioButton>
+            <RadioButton value="1month">Last Month</RadioButton>
+            <RadioButton value="6months">Last Six Months</RadioButton>
+            <RadioButton value="1year">Last Year</RadioButton>
           </RadioGroup>
           <Monitor timeSpan={this.state.timeSpan} />
         </TabPane>

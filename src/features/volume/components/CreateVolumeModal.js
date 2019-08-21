@@ -35,32 +35,33 @@ class CustomizeForm extends React.Component {
       let radioElements = [];
       let volumeTypes = this.props.volumeTypes;
       volumeTypes.items.forEach(id => {
+
         radioElements.push(
           <Radio key={id}>{volumeTypes.itemsById[id].name}</Radio>
         )
       });
       return (
-        <Modal title="创建硬盘"
+        <Modal title="Create a hard disk"
                width="350px"
-               okText="创建"
+               okText="create"
                visible={this.props.visible}
                onCancel={this.handleCancel}
                onOk={this.handleOk}
         >
           <Form>
-            <FormItem label="名称: ">
+            <FormItem label="Name: ">
               {getFieldDecorator('name')(
                 <Input />
               )}
             </FormItem>
 
-            <FormItem label="描述：">
+            <FormItem label="Description：">
               {getFieldDecorator('description')(
                 <TextArea />
               )}
             </FormItem>
 
-            <FormItem label="类型：">
+            <FormItem label="Type：">
               {getFieldDecorator('type')(
                 <RadioGroup>
                   {radioElements}
@@ -68,7 +69,7 @@ class CustomizeForm extends React.Component {
               )}
             </FormItem>
 
-            <FormItem label="容量：">
+            <FormItem label="Capacity：">
               {getFieldDecorator('size', {initialValue: 1})(
                 <Input />
               )}

@@ -36,12 +36,12 @@ class ResizeVolumeModal extends React.Component {
       this.props.dispatch(toggleVolume([]));
     } else {
       if (choosedVolumes.status === 'in-use') {
-        this.errorModal('硬盘正在使用中，不能进行扩容');
+        this.errorModal('The hard disk is in use，Cannot expand');
         return;
       }
 
       if (choosedVolumes.size === this.state.newSize) {
-        this.errorModal('扩容硬盘，必须大于当前容量');
+        this.errorModal('Expansion hard disk，Must be greater than the current capacity');
       }
     }
   }
@@ -52,8 +52,8 @@ class ResizeVolumeModal extends React.Component {
 
   errorModal = (content) => {
     Modal.error({
-      okText: '确定',
-      title: '硬盘操作错误',
+      okText: 'determine',
+      title: 'Hard disk operation error',
       content: content,
     });
   };
@@ -71,32 +71,32 @@ class ResizeVolumeModal extends React.Component {
     return(
       <div>
         <Modal
-          title="扩容硬盘"
-          okText="扩容"
+          title="Expansion Hard Disk"
+          okText="Expansion"
           visible={this.props.visible}
           onCancel={this.handleCancel}
           onOk={this.handleOk}
         >
-          <Alert message="提示：仅限扩充容量，不支持减少容量"
+          <Alert message="Tip: Expand capacity only, not support capacity reduction"
                  type="info"
                  showIcon />
 
           <Form>
-            <FormItem label="名称">
+            <FormItem label="name">
               {
                 getFieldDecorator('name', {initialValue: name})
                 (<Input disabled={true} />)
               }
             </FormItem>
 
-            <FormItem label="当前容量">
+            <FormItem label="currentcapacity">
               {
                 getFieldDecorator('size', {initialValue: currentSize})
                 (<Input disabled={true} />)
               }
             </FormItem>
 
-            <FormItem label="新容量">
+            <FormItem label="newcapacity">
               {
                 getFieldDecorator('new_size')
                 (<Row>

@@ -12,11 +12,11 @@ const QuotaItem = (props) => {
       </div>
 
       <div className={styles.number}>
-        <span className={styles.numberUsed}>{used} 已用</span>
+        <span className={styles.numberUsed}>{used} Used</span>
         <span className={styles.numberSep}>|</span>
-        <span className={styles.numberLeft}>{left} 剩余</span>
+        <span className={styles.numberLeft}>{left} Remaining</span>
         <span className={styles.numberSep}>|</span>
-        <span className={styles.numberLimit}>{limit} 配额</span>
+        <span className={styles.numberLimit}>{limit} Quota</span>
       </div>
 
       <div className={styles.progressbar}>

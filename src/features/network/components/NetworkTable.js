@@ -34,11 +34,11 @@ class NetworkTable extends React.Component {
           render = (text) => {
             if (text) {
               return (
-                <span>是</span>
+                <span>Yes</span>
               )
             } else {
               return (
-                <span>否</span>
+                <span>No</span>
               )
             }
           }

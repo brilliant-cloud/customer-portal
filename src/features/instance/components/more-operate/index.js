@@ -44,49 +44,50 @@ class MoreOperate extends React.Component {
           key="manage"
           disabled={true}
         >
-          <i className="fa fa-trash">管理安全组</i>
+          <i className="fa fa-trash">Manage Security Group</i>
         </Menu.Item>
 
         <Menu.Item
           key="edit"
           disabled={choosedInstances.length !== 1}
         >
-          <i className="fa fa-trash">编辑云主机</i>
+          <i className="fa fa-trash">Edit Cloud Host</i>
         </Menu.Item>
 
         <Menu.Item
           key="create"
           disabled={choosedInstances.length !== 1}
         >
-          <i className="fa fa-trash">制作成镜像</i>
+          <i className="fa fa-trash">
+            Make a Mirror</i>
         </Menu.Item>
 
         <Menu.Item
           key="reboot"
           disabled={true}
         >
-          <i className="fa fa-trash">硬重启</i>
+          <i className="fa fa-trash">Hard Restart</i>
         </Menu.Item>
 
         <Menu.Item
           key="stop"
           disabled={true}
         >
-          <i className="fa fa-trash">关机</i>
+          <i className="fa fa-trash">Stop</i>
         </Menu.Item>
 
         <Menu.Item
           key="start"
           disabled={true}
         >
-          <i className="fa fa-trash">开机</i>
+          <i className="fa fa-trash">Start</i>
         </Menu.Item>
 
         <Menu.Item
           key="destroy"
           disabled={choosedInstances.length === 0}
         >
-          <i className="fa fa-trash">销毁</i>
+          <i className="fa fa-trash">Destroy</i>
         </Menu.Item>
       </Menu>
     );

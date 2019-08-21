@@ -46,32 +46,32 @@ function Profile(props) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.instance}>
-        <span>主机名</span>
+        <span>CPU Name</span>
         <span>{create.filledInstance}</span>
       </div>
 
       <div className={styles.image}>
-        <span>镜像</span>
+        <span>Image Name</span>
         <span>{imageName}</span>
       </div>
 
       <div className={styles.flavor}>
-        <span>规格</span>
+        <span>Flavor Name</span>
         <span>{flavorName}</span>
       </div>
 
       <div className={styles.network}>
-        <span>网络</span>
+        <span>Internet</span>
         {networksNode}
       </div>
 
       <div className={styles.keypair}>
-        <span>密钥对</span>
+        <span>KeyPair</span>
         <span>{create.choosedKeypair}</span>
       </div>
 
       <div className={styles.sg}>
-        <span>安全组</span>
+        <span>Security Group</span>
         {securityGroupsNode}
       </div>
     </div>

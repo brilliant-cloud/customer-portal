@@ -34,24 +34,24 @@ class DetailTabs extends React.Component {
           onTabClick={(key) => this.handleTabClick(key)}
           className={styles.detailtabs}
         >
-          <TabPane tab="子网" key="subnet">
+          <TabPane tab="subnet" key="subnet">
             <SubnetTable />
           </TabPane>
 
-          <TabPane tab="端口" key="port">
+          <TabPane tab="port" key="port">
             <PortTable />
           </TabPane>
 
-          <TabPane tab="配置" key="setting">
-            配置
+          <TabPane tab="settings" key="setting">
+            configuration
           </TabPane>
 
-          <TabPane tab="图形化" key="graph">
+          <TabPane tab="graph" key="graph">
             <Graph />
           </TabPane>
 
-          <TabPane tab="操作日志" key="log">
-            操作日志
+          <TabPane tab="operation log" key="log">
+            Operation Log
           </TabPane>
         </Tabs>
     )

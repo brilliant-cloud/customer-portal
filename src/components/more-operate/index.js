@@ -6,7 +6,7 @@ function MoreOperateButton(props) {
   return (
     <Dropdown overlay={props.menu} trigger={['click']}>
       <Button type="primary" icon="appstore-o">
-        更多操作<Icon type="down" />
+          More Operations<Icon type="down" />
       </Button>
     </Dropdown>
   )

@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 
-const proxy_host = '103.248.13.91';
+const proxy_host = '118.67.215.10';
 
 let env = process.env.NODE_ENV;
 

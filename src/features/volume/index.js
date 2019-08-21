@@ -72,7 +72,8 @@ class Volume extends React.Component {
             onClick={this.handleButtonClick}
             type="primary"
             icon="plus">
-            创建
+
+            Create
           </Button>
 
           <MoreVolume

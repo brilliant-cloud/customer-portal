@@ -21,17 +21,17 @@ class DestroyInstanceModal extends React.Component {
     choosedInstance.forEach(item => {
       instanceName = instanceName + ' ' + item.name;
     });
-    const destroyDesc = '确定要销毁【' + instanceName + '】云主机吗？';
+    const destroyDesc = 'Determined to destroy【' + instanceName + '】Cloud host？';
 
     return (
       <Modal
-        title="销毁云主机"
+        title="Destroy Cloud Host"
         visible={this.props.visible}
         onCancel={this.handleCancel}
         onOk={this.handleOk}
       >
         <Alert
-          message={`提示：${destroyDesc}`}
+          message={`Prompt：${destroyDesc}`}
           type="warning"
           showIcon
         />

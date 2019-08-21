@@ -22,12 +22,12 @@ class StartStopOperate extends React.Component {
     }
   }
 
-  // 关闭操作云主机的弹出框
+
   handleOperateCancel = () => {
     this.removeSelectedServers();
   };
 
-  // 清空已选择云主机的列表项
+
   removeSelectedServers = () => {
     this.setState({
       operate: {
@@ -42,7 +42,7 @@ class StartStopOperate extends React.Component {
     })
   };
 
-  // 启动和关闭云主机的http请求
+
   handleOperateOk = () => {
     let operateType = this.state.operate.type;
     let serversID = [];
@@ -60,19 +60,19 @@ class StartStopOperate extends React.Component {
     this.removeSelectedServers();
   };
 
-  // 操作云主机
+
   handleOperate = (params, data) => {
     let notice = [];
     if (params === 'start') {
       data.forEach(item => {
         notice.push(item.name);
       });
-      notice = `你确定要启动云主机【${notice.join(',')}】吗？`;
+      notice = `Are you sure you want to start the【${notice.join(',')}】？`;
       this.setState({
         operate: {
           visible: true,
           type: 'start',
-          title: '启动云主机',
+          title: 'Start Cloud Host',
           notice,
         },
         start: data
@@ -81,12 +81,12 @@ class StartStopOperate extends React.Component {
       data.forEach(item => {
         notice.push(item.name);
       });
-      notice = `你确定要关闭云主机【${notice.join(',')}】吗？`;
+      notice = `Are you sure you want to turn off【${notice.join(',')}】？`;
       this.setState({
         operate: {
           visible: true,
           type: 'stop',
-          title: '关闭云主机',
+          title: 'Stop Cloud Host',
           notice,
         },
         stop: data
@@ -129,7 +129,7 @@ class StartStopOperate extends React.Component {
           onClick={() => this.handleOperate('start', startArr)}
           className={commonStyles.button}
         >
-        启动
+          Start Up
         </Button>
 
         <Button
@@ -139,7 +139,7 @@ class StartStopOperate extends React.Component {
           onClick={() => this.handleOperate('stop', stopArr)}
           className={commonStyles.button}
         >
-          关机
+          Shut Down
         </Button>
       </div>
     )

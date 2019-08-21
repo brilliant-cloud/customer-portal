@@ -58,20 +58,20 @@ class Usage extends React.Component {
     let url = combineURL('getTenantUsage', tmpl);
     let startTime, startUTCTime, endTime, endUTCTime;
     if (this.state.startValue && this.state.endValue) {
-      // 开始日期那天开始的 UTC 时间
+
       startTime = moment(this.state.startValue).startOf('day').format('YYYY-MM-DDTHH:mm:ss');
       startUTCTime = moment(this.state.startValue).startOf('day').utc().format('YYYY-MM-DDTHH:mm:ss');
 
-      // 结束日期那天结束的 UTC 时间
+
       endTime = moment(this.state.endValue).endOf('day').format('YYYY-MM-DDTHH:mm:ss');
       endUTCTime = moment(this.state.endValue).endOf('day').utc().format('YYYY-MM-DDTHH:mm:ss');
 
     } else {
-      // 昨天开始的 UTC 时间
+
       startTime = moment().subtract(1, 'days').startOf('day').format('YYYY-MM-DDTHH:mm:ss');
       startUTCTime = moment().subtract(1, 'days').startOf('day').utc().format('YYYY-MM-DDTHH:mm:ss');
 
-      // 今天结束的 UTC 时间
+
       endTime = moment().endOf('day').format('YYYY-MM-DDTHH:mm:ss');
       endUTCTime = moment().endOf('day').utc().format('YYYY-MM-DDTHH:mm:ss');
     }
@@ -104,7 +104,7 @@ class Usage extends React.Component {
       return (
         <div>
           <div className={styles.header}>
-            <span className={styles.title}>使用情况摘要</span>
+            <span className={styles.title}>Usage Summary </span>
 
             <DatePicker
               size="large"
@@ -127,7 +127,7 @@ class Usage extends React.Component {
               type="primary"
               onClick={this.onSubmitDate}
             >
-              提交
+              Submit
             </Button>
           </div>
           <UsageItem

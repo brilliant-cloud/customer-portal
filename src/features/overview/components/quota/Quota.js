@@ -32,8 +32,8 @@ function Quota(props) {
         }
 
         if (limit < 0) {
-          limit = '无限';
-          left = '无限';
+          limit = 'limit';
+          left = 'left';
           pbUsed = '0%';
           pbLeft = '100%';
         } else {
@@ -64,7 +64,7 @@ function Quota(props) {
     return (
       <div className={styles.container}>
         <p className={styles.header}>
-          资源配额使用情况
+          Resource Quota Usage
         </p>
         <div className={styles.quota}>
           {quotaItemElements}

@@ -25,20 +25,20 @@ class ModifyVolumeModal extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-      <Modal title="修改硬盘的信息"
-             okText="修改"
+      <Modal title="Modify the information of the hard disk"
+             okText="Modify"
              visible={this.props.visible}
              onCancel={this.handleCancel}
              onOk={this.handleOk}
       >
         <Form>
-          <FormItem label="名称：">
+          <FormItem label="Name：">
             {getFieldDecorator('name')(
               <Input />
             )}
           </FormItem>
 
-          <FormItem label="描述：">
+          <FormItem label="Description：">
             {getFieldDecorator('description')(
               <TextArea />
             )}

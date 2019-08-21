@@ -34,7 +34,7 @@ class UsageItem extends React.Component {
               return (
                 <span>
                   {text}
-                  <span className={styles.deleted}>(已删除)</span>
+                  <span className={styles.deleted}>(deleted)</span>
                 </span>
               )
             }
@@ -57,7 +57,7 @@ class UsageItem extends React.Component {
             if (key === 'started_at') {
               obj[key] = moment(ele[key]).startOf('day').fromNow();
             } else if (key === 'hours') {
-              obj[key] = Math.floor(ele[key]) + ' 小时';
+              obj[key] = Math.floor(ele[key]) + ' hours';
             } else {
               obj[key] = ele[key];
             }

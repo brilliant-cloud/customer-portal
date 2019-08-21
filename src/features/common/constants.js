@@ -27,13 +27,13 @@ const TENANT_USAGE_TABLE_COLUMN = [
 ];
 
 const TENANT_USAGE_FIELD = {
-  'name': '名称',
-  'flavor': '规格',
-  'vcpus': 'vCPU数量',
-  'memory_mb': '内存(MB)',
-  'local_gb': '系统盘(GB)',
-  'hours': '开机时间',
-  'started_at': '创建时间'
+  'name': 'Name',
+  'flavor': 'Specification',
+  'vcpus': 'vCPU quantity',
+  'memory_mb': 'RAM(MB)',
+  'local_gb': 'System Disk(GB)',
+  'hours': 'Boot Time',
+  'started_at': 'Creation Time'
 };
 
 // Flavor
@@ -45,11 +45,11 @@ const FLAVOR_TABLE_COLUMN = [
 ];
 
 const FLAVOR_FIELD = {
-  "name": "名称",
-  "id": "规格ID",
-  "vcpus": "vCPU数量",
-  "ram": "内存大小",
-  "disk": "系统盘大小"
+  "name": "Name",
+  "id": "Specification ID",
+  "vcpus": "vCPU Quantity",
+  "ram": "Memory Size",
+  "disk": "System Disk Size"
 };
 
 // Instance
@@ -68,75 +68,70 @@ const INSTANCE_TABLE_COLUMN = [
 ];
 
 const INSTANCE_FIELD = {
-  "OS-EXT-STS:task_state": "过渡状态",
-  "addresses": "IP地址",
-  "image": "镜像",
-  "OS-EXT-STS:vm_state": "VM状态",
-  "OS-EXT-SRV-ATTR:instance_name": "宿主机实例名",
-  "OS-SRV-USG:launched_at": "启动时间",
-  "flavor": "规格",
-  "id": "云主机ID",
-  "security_groups": "安全组",
-  "user_id": "用户",
+  "OS-EXT-STS:task_state": "Transition state",
+  "addresses": "IP Address",
+  "image": "Mirror",
+  "OS-EXT-STS:vm_state": "VM status",
+  "OS-EXT-SRV-ATTR:instance_name": "Host Instance Name",
+  "OS-SRV-USG:launched_at": "Start Time",
+  "flavor": "Specification",
+  "id": "Cloud Host ID",
+  "security_groups": "Security Group",
+  "user_id": "User",
   "OS-DCF:diskConfig": "DiskConfig",
-  "OS-EXT-STS:power_state": "电源状态",
-  "OS-EXT-AZ:availability_zone": "可用区",
-  "metadata": "元数据",
-  "status": "状态",
-  "updated": "更新时间",
-  "hostId": "宿主机",
-  "OS-EXT-SRV-ATTR:host": "宿主机",
-  "key_name": "密钥对",
-  "OS-EXT-SRV-ATTR:hypervisor_hostname": "宿主机主机名",
-  "name": "名称",
-  "created": "创建时间",
-  "tenant_id": "项目",
-  "os-extended-volumes:volumes_attached": "挂载的磁盘",
+  "OS-EXT-STS:power_state": "Power Status",
+  "OS-EXT-AZ:availability_zone": "Availability Zone",
+  "metadata": "Metadata",
+  "status": "Status",
+  "updated": "Update Time",
+  "hostId": "Host Machine",
+  "OS-EXT-SRV-ATTR:host": "Host Machine",
+  "key_name": "Key Pair",
+  "OS-EXT-SRV-ATTR:hypervisor_hostname": "Hypervisor Host Name",
+  "name": "Name",
+  "created": "Creation Time",
+  "tenant_id": "Project",
+  "os-extended-volumes:volumes_attached": "Mounted Disk",
   "config_drive": "ConfigDrive"
 };
 
 const INSTANCE_STATUS = {
-  "ACTIVE": "运行中",
-  "BUILD": "构建中",
-  "DELETED": "已删除",
-  "ERROR": "错误",
-  "HARD_REBOOT": "硬重启中",
-  "MIGRATING": "迁移中",
-  "PASSWORD": "重置密码中",
-  "PAUSED": "暂停",
-  "REBOOT": "软重启中",
-  "REBUILD": "重建中",
-  "RESCUED": "救援模式",
-  "RESIZED": "更改规格",
-  "REVERT_RESIZE": "撤消更改规格",
-  "SOFT_DELETED": "软删除",
-  "STOPPED": "停止",
-  "SUSPENDED": "挂起",
-  "SHUTOFF": "关闭",
-  "UNKNOWN": "未知",
-  "VERIFY_RESIZE": "确认变更规格",
+  "ACTIVE": "Running",
+  "BUILD": "Building",
+  "DELETED": "Deleted",
+  "ERROR": "Error",
+  "HARD_REBOOT": "Hard Reboot",
+  "MIGRATING": "Migrating",
+  "PASSWORD": "Password",
+  "PAUSED": "Paused",
+  "REBOOT": "Reboot",
+  "REBUILD": "Rebuild",
+  "RESCUED": "Rescued",
+  "RESIZED": "Resized",
+  "REVERT_RESIZE": "Revert Change",
+  "SOFT_DELETED": "Soft Delete",
+  "STOPPED": "Stopped",
+  "SUSPENDED": "Suspended",
+  "SHUTOFF": "Shut Down",
+  "UNKNOWN": "Unknown",
+  "VERIFY_RESIZE": "Confirm",
 };
 
 const INSTANCE_POWER_STATE = {
   "1": {
-    "en": "Running",
-    "ch": "运行中"
+    "en": "Running"
   },
   "3": {
-    "en": "Paused",
-    "ch": "暂停"
+    "en": "Paused"
   },
   "4": {
-    "en": "Shutdown",
-    "ch": "关闭"
+    "en": "Shutdown"
   },
   "6": {
-    "en": "Crashed",
-    "ch": "崩溃"
+    "en": "Crashed"
   },
   "7": {
-    "en": "Suspended",
-    "ch": "挂起"
+    "en": "Suspended"
   }
 };
 
@@ -149,10 +144,10 @@ const IMAGE_TABLE_COLUMN = [
 ];
 
 const IMAGE_FIELD = {
-  "name": "名称",
-  "status": "状态",
-  "size": "大小",
-  "owner": "所有者"
+  "name": "Name",
+  "status": "Status",
+  "size": "Size",
+  "owner": "Owner"
 };
 
 // Keypair
@@ -162,8 +157,8 @@ const KEYPAIR_TABLE_COLUMN = [
 ];
 
 const KEYPAIR_FIELD = {
-  "name": "名称",
-  "fingerprint": "公钥指纹",
+  "name": "Name",
+  "fingerprint": "Finger Print",
 };
 
 // Volume
@@ -180,34 +175,34 @@ const VOLUME_TABLE_COLUMN = [
 ];
 
 const VOLUME_FIELD = {
-  "name": "名称",
-  "description": "描述",
-  "size": "大小(GB)",
-  "volume_type": "磁盘类型",
-  "status": "状态",
-  "attachments": "连接到 serverID 的设备",
-  "bootable": "可启动",
-  "disk_format": "磁盘格式",
-  "created_at": "创建时间"
+  "name": "Name",
+  "description": "Description",
+  "size": "Size(GB)",
+  "volume_type": "Volume Type",
+  "status": "Status",
+  "attachments": "Volume Attached with serverID",
+  "bootable": "Bootable",
+  "disk_format": "Disk Format",
+  "created_at": "Creation Time"
 };
 
 const VOLUME_STATUS = {
-  "creating": "创建中",
-  "available": "可用",   // green
-  "attaching": "绑定中",
-  "detaching": "解绑中",
-  "in-use": "在用",  // blue
-  "deleting": "删除中",
-  "error": "错误",    // red
-  "error_deleting": "删除错误",  // red
-  "error_extending": "扩容错误", // red
-  "extending": "扩容中",
+  "creating": "Creating",
+  "available": "Available",   // green
+  "attaching": "Attaching",
+  "detaching": "DeAttaching",
+  "in-use": "In Use",  // blue
+  "deleting": "Deleting",
+  "error": "Error",    // red
+  "error_deleting": "Error Deleting",  // red
+  "error_extending": "Error Details", // red
+  "extending": "Expansion",
   // all others yellow.
 };
 
 const VOLUME_TYPE = {
-  "Capacity": "容量型",
-  "Performance": "性能型",
+  "Capacity": "Capacity",
+  "Performance": "Performance",
 };
 
 // Quota
@@ -226,42 +221,42 @@ const QUOTA_LIST = [
 ];
 
 const QUOTA_FIELD = {
-  'injected_file_content_bytes': '注入的文件内容字节数 (个)',
-  'metadata_items': '元数据条目 (个)',
-  'server_group_members': '主机组成员 (个)',
-  'server_groups': '主机组 (个)',
-  'ram': '内存 (MB)',
-  'floating_ips': '浮动IP (个)',
-  'key_pairs': '密钥对 (个)',
-  'instances': '云主机 (个)',
-  'security_group_rules': '安全组规则 (个)',
-  'injected_files': '注入的文件 (个)',
-  'cores': 'vCPU数量 (核)',
-  'fixed_ips': '固定IP (个)',
-  'injected_file_path_bytes': '注入文件路径的长度 (个)',
-  'security_groups': '安全组 (个)',
+  'injected_file_content_bytes': 'Injected File Content in Bytes (个)',
+  'metadata_items': 'Metadata Entry (个)',
+  'server_group_members': 'Server Group Members (个)',
+  'server_groups': 'Server Groups (个)',
+  'ram': 'RAM (MB)',
+  'floating_ips': 'Floating IP (个)',
+  'key_pairs': 'Key Pairs (个)',
+  'instances': 'Instances (个)',
+  'security_group_rules': 'Security Group Rules (个)',
+  'injected_files': 'Injected Files (个)',
+  'cores': 'vCPU Quantity ',
+  'fixed_ips': 'Fixed IP (个)',
+  'injected_file_path_bytes': 'Injected File Path (个)',
+  'security_groups': 'Security Group (个)',
 };
 
 //
 const BREADCRUMB_FIELD = {
-  'console': '控制台',
-  'overview': '总览',
-  'instances': '云主机',
-  'volumes': '硬盘',
-  'images': '镜像',
-  'keypairs': 'SSH密钥',
-  'vpc': 'VPC 网络',
-  'routers': '路由器',
+  'console': 'console',
+  'overview': 'overview',
+  'instances': 'instances',
+  'volumes': 'volumes',
+  'images': 'images',
+  'keypairs': 'SSHKeyPairs',
+  'vpc': 'VPC Network',
+  'routers': 'Router',
 };
 
 //
 const MONITOR_TIME_SPAN = {
-  "1hour": "1h",        //最近1小时
-  "6hours": "6h",       //最近6小时
-  "1day": "24h",        //最近1天
-  "1month": "30d",      //最近1个月
-  "6months": "180d",    //最近半年
-  "1year": "365d",      //最近1年
+  "1hour": "1h",
+  "6hours": "6h",
+  "1day": "24h",
+  "1month": "30d",
+  "6months": "180d",
+  "1year": "365d",
 };
 
 const MONITOR_TIME_STEP = {
@@ -273,7 +268,7 @@ const MONITOR_TIME_STEP = {
   "1year": "48h",
 };
 
-// 网络
+
 const NETWORK_TABLE_COLUMN = [
   'name',
   'status',
@@ -282,13 +277,13 @@ const NETWORK_TABLE_COLUMN = [
 ];
 
 const NETWORK_FIELD = {
-  "status": "状态",
-  "name": "名称",
-  "admin_state_up": "管理状态",
-  "router:external": "外部网络",     // true是， false否
+  "status": "Status",
+  "name": "Name",
+  "admin_state_up": "Management Status",
+  "router:external": "External network",
 };
 
-// 路由器
+
 const ROUTER_TABLE_COLUMN = [
   'name',
   'status',
@@ -297,13 +292,13 @@ const ROUTER_TABLE_COLUMN = [
 ];
 
 const ROUTER_FIELD = {
-  "name": "名称",
-  "status": "状态",
-  "admin_state_up": "管理状态",
-  "external_gateway_info": "外部网关"     //只显示ip_address
+  "name": "Name",
+  "status": "Status",
+  "admin_state_up": "Management Status",
+  "external_gateway_info": "External Gateway"
 };
 
-// 子网
+
 const SUBNET_TABLE_COLUMN = [
   'name',
   'cidr',
@@ -313,14 +308,14 @@ const SUBNET_TABLE_COLUMN = [
 ];
 
 const SUBNET_FIELD = {
-  "name": "名称",
-  "cidr": "网络地址",
-  "ip_version": "IP协议版本",
-  "gateway_ip": "网关地址",
-  "network_id": "网络"
+  "name": "Name",
+  "cidr": "CIDR",
+  "ip_version": "IP Version",
+  "gateway_ip": "Gateway IP",
+  "network_id": "Network Id"
 };
 
-// 端口
+
 const PORT_TABLE_COLUMN = [
   'name',
   'fixed_ips',
@@ -331,12 +326,12 @@ const PORT_TABLE_COLUMN = [
 ];
 
 const PORT_FIELD = {
-  "name": "名称",
-  "fixed_ips": "固定IP", // 显示ip_address
-  "device_owner": "连接的设备的类型",
-  "device_id": "连接的设备的ID",
-  "status": "状态",
-  "admin_state_up": "管理状态",
+  "name": "Name",
+  "fixed_ips": "Fixed IP",
+  "device_owner": "Type Of Connected device",
+  "device_id": "ID Of Connected Device",
+  "status": "Status",
+  "admin_state_up": "Management Status",
 };
 
 export {

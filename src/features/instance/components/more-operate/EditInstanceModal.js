@@ -30,13 +30,13 @@ class EditInstanceModal extends React.Component {
 
     return (
       <Modal
-        title="编辑云主机"
+        title="Edit Cloud Host"
         visible={this.props.visible}
         onCancel={this.handleCancel}
         onOk={this.handleOk}
       >
         <Form>
-          <FormItem label="名称：">
+          <FormItem label="Name：">
             {getFieldDecorator('name')(
               <Input />
             )}

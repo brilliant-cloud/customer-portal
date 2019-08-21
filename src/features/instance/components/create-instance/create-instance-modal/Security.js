@@ -68,7 +68,7 @@ class Security extends React.Component {
         <Form>
           <FormItem
             {...formItemLayout}
-            label="主机名">
+            label="CPU Name">
             {
               getFieldDecorator('input', {initialValue: this.props.create.filledInstance})(
                 <Input />
@@ -77,7 +77,7 @@ class Security extends React.Component {
           </FormItem>
           <FormItem
             {...formItemLayout}
-            label="SSH密钥对">
+            label="SSH Key Pair">
             {getFieldDecorator('select', {initialValue: keypairs[0]})(
               <Select>
                 {optionArrs}
@@ -86,7 +86,7 @@ class Security extends React.Component {
           </FormItem>
           <FormItem
             {...formItemLayout}
-            label="安全组">
+            label="Security Group">
             {getFieldDecorator('radio-group')(
               <CheckboxGroup
                 options={checkboxArrs}

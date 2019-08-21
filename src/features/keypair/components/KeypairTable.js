@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Table, Spin } from 'antd';
+
 import { selectKeypairs } from 'app/selectors/orm/nova';
 import { KEYPAIR_TABLE_COLUMN, KEYPAIR_FIELD } from 'features/common/constants';
 import commonStyles from 'features/common/styles.css';
@@ -45,13 +46,16 @@ class KeypairTable extends React.Component {
 
       return (
         <div className={commonStyles.wrapper}>
+
           <Table
             columns={columns}
             bordered
             size="middle"
             dataSource={data}
             rowKey='name'
+            locale={{emptyText: 'No Data'}}
           />
+
         </div>
       )
     }

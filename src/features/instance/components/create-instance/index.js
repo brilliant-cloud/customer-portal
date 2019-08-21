@@ -18,7 +18,7 @@ class CreateInstance extends React.Component {
     }
   }
 
-  // 创建云主机的弹出框
+
   handleModalVisible = (visible) => {
       this.setState({
         visible: visible
@@ -47,7 +47,7 @@ class CreateInstance extends React.Component {
           onClick={this.handleCreate}
           className={commonStyles.button}
         >
-          创建
+            Create
         </Button>
       </div>
     )

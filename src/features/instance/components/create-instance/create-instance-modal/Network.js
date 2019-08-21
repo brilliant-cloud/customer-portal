@@ -72,7 +72,7 @@ class Network extends React.Component {
         <Row gutter={20}>
           <Col span={12}>
             <div>
-              <span>可选网络</span>
+              <span>Optional Network</span>
               <div className={styles.available}>
                 {availableNetworksNode}
               </div>
@@ -80,7 +80,7 @@ class Network extends React.Component {
           </Col>
           <Col span={12}>
             <div>
-              <span>已选网络</span>
+              <span>Selected Network</span>
               <div className={styles.choosed}>
                 {choosedNetworksNode}
               </div>

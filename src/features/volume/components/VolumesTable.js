@@ -31,12 +31,11 @@ class VolumesTable extends React.Component {
   };
 
   render() {
-    // 表格列的配置描述
+
     let columns = [];
     VOLUME_TABLE_COLUMN.forEach(title => {
 
-      // 表格列的排序函数
-      // 表格列的渲染函数
+
       let sorter, render;
       if (title === 'name') {
         sorter = (a, b) => a.name.length - b.name.length;
@@ -62,7 +61,7 @@ class VolumesTable extends React.Component {
       } else if (title === 'volume_type') {
         render = (text) => (<span>{VOLUME_TYPE[text]}</span>)
       } else if (title === 'bootable') {
-        render = (text) => (<span>{text === 'true' ? '是' : '否'}</span>)
+        render = (text) => (<span>{text === 'true' ? 'Yes' : 'No'}</span>)
       } else if (title === 'attachments') {
         render = (text) => {
           let attachments = [];
@@ -78,7 +77,7 @@ class VolumesTable extends React.Component {
 
               attachments.push(
                 <span key={attachment['server_id']}>
-                  {serverName}的
+                  {serverName}of
                   <span
                     style={{
                       'backgroundColor': '#268F3B',
@@ -112,14 +111,14 @@ class VolumesTable extends React.Component {
       });
     });
 
-    // 表格数据数组
+
     let data = [];
     let volumes = this.props.volumes;
     volumes.items.forEach(volumeId => {
       data.push(volumes.itemsById[volumeId]);
     });
 
-    // 表格行的选择功能的配置
+
     const rowSelection = {
       selectedRowKeys: this.props.choosedVolumes.map(item => item.id),
       onChange: this.onSelectChange

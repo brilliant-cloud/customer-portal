@@ -6,31 +6,31 @@ const itemProps = [
     'key': 'mount',
     'disabled': true,
     'fa': 'fa fa-laptop',
-    'name': '加载硬盘到主机'
+    'name': 'Load the hard disk to host'
   },
   {
     'key': 'unmount',
     'disabled': true,
     'fa': 'fa fa-chain-broken',
-    'name': '卸载硬盘'
+    'name': 'Uninstall the hard drive'
   },
   {
     'key': 'resize',
     'disabled': disabled,
     'fa': 'fa fa-expand',
-    'name': '扩容'
+    'name': 'Expansion'
   },
   {
     'key': 'modify',
     'disabled': disabled,
     'fa': 'fa fa-pencil',
-    'name': '修改'
+    'name': 'Modify'
   },
   {
     'key': 'delete',
     'disabled': deleteDisabled,
     'fa': 'fa fa-trash',
-    'name': '删除'
+    'name': 'Delete'
   }
 ];
 const createMenuItems = (props) => {

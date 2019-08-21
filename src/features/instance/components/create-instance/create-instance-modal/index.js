@@ -58,25 +58,25 @@ class CreateInstanceModal extends React.Component {
   render() {
     const { current } = this.state;
     const steps = [{
-      title: '选择镜像',
+      title: 'Image',
       content: <Image />
     }, {
-      title: '选择规格',
+      title: 'Flavor',
       content: <Flavor />
     }, {
-      title: '选择网络',
+      title: 'Network',
       content: <Network />
     }, {
-      title: '安全设置',
+      title: 'Security',
       content: <Security />
     }, {
-      title: '确认',
+      title: 'Profile',
       content: <Profile />
     }];
 
     return (
       <Modal
-        title="创建云主机"
+        title="Create a Cloud Host"
         width="700px"
         footer={null}
         visible={this.props.visible}
@@ -100,7 +100,7 @@ class CreateInstanceModal extends React.Component {
                 type="primary"
                 onClick={() => this.next()}
               >
-                下一步
+                Next Step
               </Button>
             }
             {
@@ -111,7 +111,7 @@ class CreateInstanceModal extends React.Component {
                 type="primary"
                 onClick={this.handleSubmit}
               >
-                完成
+                Carry Out
               </Button>
             }
             {
@@ -122,7 +122,8 @@ class CreateInstanceModal extends React.Component {
                 type="primary"
                 onClick={() => this.prev()}
               >
-                上一步
+
+                Previous
               </Button>
             }
           </div>

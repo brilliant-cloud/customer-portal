@@ -25,35 +25,35 @@ class MoreVolume extends React.Component {
           key="mount"
           disabled={true}
         >
-          <i className="fa fa-laptop">加载硬盘到主机</i>
+          <i className="fa fa-laptop">Load the hard disk to the host</i>
         </Menu.Item>
 
         <Menu.Item
           key="unmount"
           disabled={true}
         >
-          <i className="fa fa-chain-broken">卸载硬盘</i>
+          <i className="fa fa-chain-broken">Uninstall the hard drive</i>
         </Menu.Item>
 
         <Menu.Item
           key="resize"
           disabled={choosedVolumes.length !== 1}
         >
-          <i className="fa fa-expand">扩容</i>
+          <i className="fa fa-expand">Expand</i>
         </Menu.Item>
 
         <Menu.Item
           key="modify"
           disabled={choosedVolumes.length !== 1}
         >
-          <i className="fa fa-pencil">修改</i>
+          <i className="fa fa-pencil">Modify</i>
         </Menu.Item>
 
         <Menu.Item
           key="delete"
           disabled={choosedVolumes.length < 1}
         >
-          <i className="fa fa-trash">删除</i>
+          <i className="fa fa-trash">Delete</i>
         </Menu.Item>
       </Menu>
     );
