@@ -1,0 +1,27 @@
+.network {
+    border: 1px solid #cdcdcd;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.add,
+.remove {
+    position: absolute;
+    right: 10px;
+}
+
+.available,
+.choosed {
+    background-color: #ECECEC;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.add:hover,
+.remove:hover {
+    cursor: pointer;
+    font-size: 14px;
+}

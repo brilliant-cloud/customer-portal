@@ -1,0 +1,49 @@
+.item {
+    padding: 8px 5px 20px 5px;
+    /* border-bottom: 1px #ddd dashed; */
+}
+
+
+.description {
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.title {
+    font-size: 12px;
+}
+
+.number {
+    font-size: 11px;
+}
+
+.numberUsed {
+    color: #108EE9;
+}
+
+.numberSep {
+    margin: 0 5px;
+}
+
+.numberLeft {
+    color: gray;
+}
+
+.numberLimit {
+    color: black;
+}
+
+
+/* progressbar */
+.pbUsed {
+    height: 7px;
+    background-color: #108EE9;
+    float: left;
+}
+
+
+.pbLeft {
+    height: 7px;
+    background-color: lightgray;
+    float: right;
+}

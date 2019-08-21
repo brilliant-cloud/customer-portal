@@ -1,0 +1,12 @@
+.fa::before {
+    margin-right: 15px;
+}
+
+.bolt::before {
+    margin-left: 5px;
+    margin-right: 17px;
+}
+
+.item {
+    margin-left: 8px;
+}

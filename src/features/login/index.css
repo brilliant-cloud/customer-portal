@@ -1,0 +1,49 @@
+.form {
+    width: 400px;
+    position:fixed;
+    left:0;
+    right:0;
+    margin: auto;
+    top:200px;
+    background-color: #ffffff;
+    padding: 50px 40px 40px 40px;
+    box-shadow: 0 0 1em #888;
+    border-radius: 5px;
+}
+
+.wrapper {
+    height: 100%;
+    position: relative;
+    background-image: url(../../assets/images/login_bg.jpg);
+    background-size: cover;
+    background-position: 50%;
+}
+
+.btnLogin {
+  width: 100%;
+}
+
+.experience {
+    background-color: #34A853;
+    font-size: 14px;
+    color: #fff;
+    text-align: right;
+    margin-bottom: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+}
+
+.experience:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.github {
+    position: absolute;
+    bottom: 8px;
+    left: 40px;
+}

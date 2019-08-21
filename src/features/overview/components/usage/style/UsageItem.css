@@ -1,0 +1,10 @@
+.item {
+    background-color: #ffffff;
+    padding: 20px 30px 0 30px;
+}
+
+.deleted {
+    color: #999;
+    font-size: 11px;
+    font-style: italic;
+}

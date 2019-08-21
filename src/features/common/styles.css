@@ -1,0 +1,81 @@
+.wrapper {
+    margin: 0 20px;
+    padding: 20px 20px 0 20px;
+    background-color: #ffffff;
+}
+
+.button {
+    margin-right: 5px;
+}
+
+.toolbar {
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: flex;
+}
+
+.time {
+    font-size: 11px;
+    font-style: italic;
+    color: #999;
+}
+
+@-webkit-keyframes blink {
+    to {
+        background-color: transparent;
+    }
+}
+
+.build,
+.inuse,
+.available,
+.deleting,
+.creating {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #FBBC05;
+    border-radius: 5px;
+    margin-right: 2px;
+}
+
+.available {
+    background-color: #34A853;
+    box-shadow: 0 0 4px #34A853;
+}
+
+.inuse {
+    background-color: #108EE9;
+    box-shadow: 0 0 4px #108EE9;
+}
+
+.build,
+.deleting,
+.creating {
+    -webkit-animation-name: blink;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    box-shadow: 0 0 4px #FBBC05;
+}
+
+.shutoff,
+.active {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #34A853;
+    margin-right: 2px;
+}
+
+.active {
+    box-shadow: 0 0 4px #34A853;
+}
+
+.shutoff {
+    background-color: #EB4B4B;
+}
+
+.menu i::before {
+    margin-right: 5px;
+}

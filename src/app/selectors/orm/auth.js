@@ -1,0 +1,1 @@
+export const selectLogin = (state) => state.orm.auth.login;

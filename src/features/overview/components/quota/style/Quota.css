@@ -1,0 +1,16 @@
+.container {
+    margin-bottom: 20px;
+}
+
+.header {
+    font-size: 18px;
+    font-weight: 800;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.quota {
+    padding: 20px 30px;
+    background-color: #ffffff;
+}

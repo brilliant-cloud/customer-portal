@@ -1,0 +1,12 @@
+.log > div {
+    background-color: #111;
+    padding: 3px 10px;
+    color: #ffffff;
+    border-bottom: 1px dotted #444;
+}
+
+.log {
+    height: 600px;
+    overflow-y: scroll;
+    word-wrap: break-word;
+}

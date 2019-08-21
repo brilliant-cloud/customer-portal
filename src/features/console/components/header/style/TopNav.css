@@ -1,0 +1,21 @@
+.logout {
+    position: fixed;
+    right: 50px;
+    font-size: 16px;
+    color: #fafafa;
+}
+
+.logo:hover,
+.logout:hover {
+    cursor: pointer;
+    color: #108EE9;
+}
+
+.logo {
+    color: #fafafa;
+    font-size: 24px;
+    display: inline-block;
+    background-color: #505050;
+    width: 200px;
+    text-align: center;
+}

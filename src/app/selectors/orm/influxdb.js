@@ -1,0 +1,1 @@
+export const selectMonitor = (state) => state.orm.influxdb.monitor;

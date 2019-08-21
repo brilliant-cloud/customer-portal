@@ -1,0 +1,54 @@
+.overview {
+    width: 320px;
+    background-color: #ffffff;
+    padding: 15px;
+    margin-right: 20px;
+    float: left
+}
+
+.title {
+    font-size: 18px;
+}
+
+.subtitle {
+    font-size: 14px;
+}
+
+.basic,
+.flavor,
+.addresses,
+.security {
+    margin-top: 20px;
+}
+
+.subtitle {
+    padding: 0 6px;
+    border-left: 2px solid #108EE9;
+    line-height: 12px;
+    margin-bottom: 5px;
+}
+
+.overview dt {
+    float: left;
+    width: 100px;
+    padding: 8px 0;
+    font-size: 13px;
+}
+
+.overview dd {
+    border-bottom: 1px solid #f2f2f2;
+    padding: 10px 0 10px 100px;
+    font-size: 12px;
+}
+
+.ipinfo {
+    margin-bottom: 5px;
+}
+
+.iplabel {
+    background-color: #108EE9;
+    padding: 2px 4px;
+    color: #ffffff;
+    margin-left: 5px;
+    border-radius: 3px;
+}

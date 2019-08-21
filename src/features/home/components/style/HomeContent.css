@@ -1,0 +1,7 @@
+.container .slider {
+  text-align: center;
+  height: 650px;
+  line-height: 650px;
+  background: #364d79;
+  overflow: hidden;
+}

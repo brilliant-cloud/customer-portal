@@ -1,0 +1,26 @@
+.content {
+    margin: 20px 0 40px 0;
+}
+
+.action {
+    position: relative;
+}
+
+.prev,
+.next,
+.confirm {
+    position: absolute;
+    top: -18px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.confirm {
+    right: 10px;
+}

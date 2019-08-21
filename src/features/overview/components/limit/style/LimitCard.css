@@ -1,0 +1,48 @@
+.card {
+    display: flex;
+    background-color: #fafafa;
+    border: 0 solid #f1f1f1;
+    background-clip: padding-box;
+    margin-bottom: 20px;
+}
+
+.profile {
+    text-align: right;
+    margin: auto;
+    margin-right: 10px;
+}
+
+.profile h3 {
+    font-size: 24px;
+    color: #00B19D
+}
+
+.profile p {
+    font-size: 18px;
+    color: #111
+}
+
+.inuse {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.limit {
+    font-size: 20px;
+    font-weight: bold;
+    color: #111;
+    margin-left: 5px;
+}
+
+.instances {
+    color: #24CAA1
+}
+
+.ram {
+    color: #EB4B4B
+}
+
+.cores {
+    color: #2EB7F3
+}
