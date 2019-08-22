@@ -13,6 +13,8 @@ class CustomizeForm extends React.Component {
     super(props);
   }
 
+
+
   handleOk = () => {
     let reqBody = this.props.form.getFieldsValue();
     this.props.dispatch(createVolume(reqBody));
@@ -27,7 +29,6 @@ class CustomizeForm extends React.Component {
 
     const { getFieldDecorator } = this.props.form;
 
-    console.log(getFieldDecorator)
 
     if (this.props.volumeTypes.loading) {
       return (
@@ -36,12 +37,14 @@ class CustomizeForm extends React.Component {
     } else {
       let radioElements = [];
       let volumeTypes = this.props.volumeTypes;
+
       volumeTypes.items.forEach(id => {
 
         radioElements.push(
-          <Radio key={id}>{volumeTypes.itemsById[id].name}</Radio>
+          <Radio key={id} value={id}>{volumeTypes.itemsById[id].name}</Radio>
         )
       });
+      console.log(volumeTypes.items[0]);
       return (
         <Modal title="Create a hard disk"
                width="350px"
@@ -65,8 +68,8 @@ class CustomizeForm extends React.Component {
             </FormItem>
 
             <FormItem label="Type：" >
-              {getFieldDecorator('type')(
-                <RadioGroup>
+              {getFieldDecorator('type',{initialValue: volumeTypes.items[0]})(
+                <RadioGroup >
                   {radioElements}
                 </RadioGroup>
               )}
