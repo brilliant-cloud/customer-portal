@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Modal, Form, Input, Radio, Spin } from 'antd';
+import { Modal, Form, Input, Radio, Spin , Select} from 'antd';
 import { createVolume , getVolumes} from 'app/orm/cinder/volume/actions';
 import { selectVolumeTypes } from 'app/selectors/orm/cinder';
-
+import {selectImages} from "app/selectors/orm/glance";
+const {Option} = Select;
 const RadioGroup = Radio.Group;
 const { TextArea } = Input;
 const FormItem = Form.Item;
@@ -16,7 +17,19 @@ class CustomizeForm extends React.Component {
 
 
   handleOk = () => {
-    let reqBody = this.props.form.getFieldsValue();
+    let fieldsValue = this.props.form.getFieldsValue();
+    console.log(fieldsValue);
+    let size = fieldsValue.size;
+
+    const reqBody = {
+      "volume": {
+        "size": size.toString(),
+        "name": fieldsValue.name,
+        "imageRef": fieldsValue.image,
+        "volume_type": fieldsValue.type,
+      }
+    };
+    console.log(reqBody);
     this.props.dispatch(createVolume(reqBody));
     this.handleCancel();
   };
@@ -28,15 +41,18 @@ class CustomizeForm extends React.Component {
   render() {
 
     const { getFieldDecorator } = this.props.form;
+    console.log(this.props);
 
 
-    if (this.props.volumeTypes.loading) {
+    if (this.props.volumeTypes.loading && this.props.imageTypes.loading) {
       return (
         <Spin />
       )
     } else {
       let radioElements = [];
+      let imageElements = [];
       let volumeTypes = this.props.volumeTypes;
+      let imageTypes = this.props.imageTypes;
 
       volumeTypes.items.forEach(id => {
 
@@ -44,7 +60,13 @@ class CustomizeForm extends React.Component {
           <Radio key={id} value={id}>{volumeTypes.itemsById[id].name}</Radio>
         )
       });
-      console.log(volumeTypes.items[0]);
+
+      imageTypes.items.forEach(id =>{
+        imageElements.push(
+            <Option key={id} value={id}>{imageTypes.itemsById[id].name}</Option>
+        )
+      });
+
       return (
         <Modal title="Create a hard disk"
                width="350px"
@@ -80,6 +102,13 @@ class CustomizeForm extends React.Component {
                 <Input />
               )}
             </FormItem>
+            <FormItem >
+              {getFieldDecorator('image')(
+              <Select  >
+                {imageElements}
+              </Select>
+              )}
+            </FormItem>
           </Form>
         </Modal>
       )
@@ -88,9 +117,10 @@ class CustomizeForm extends React.Component {
 }
 
 function mapStateToProps(state) {
-  console.log(state)
+
   return {
-    volumeTypes: selectVolumeTypes(state)
+    volumeTypes: selectVolumeTypes(state),
+    imageTypes: selectImages(state),
   }
 }
 

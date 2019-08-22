@@ -123,9 +123,7 @@ const createVolume = (reqBody) => {
     let scopedToken = localStorage.getItem('scopedToken');
     let url = combineURL('createVolume');
     console.log(reqBody);
-    reqBody = {
-      'volume': reqBody
-    };
+
     fetch(url, {
       method: 'POST',
       headers: {

@@ -14,6 +14,7 @@ import ModifyVolumeModal from 'features/volume/components/ModifyVolumeModal';
 import ResizeVolumeModal from 'features/volume/components/ResizeVolumeModal';
 
 import commonStyles from 'features/common/styles.css';
+import {getImages} from "app/orm/glance/image/actions";
 
 class Volume extends React.Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class Volume extends React.Component {
 
   componentWillMount() {
     this.props.dispatch(getVolumes());
+    this.props.dispatch(getImages());
     this.props.dispatch(getServers());
     this.props.dispatch(getVolumeTypes());
   }
