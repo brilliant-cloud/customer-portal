@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { uniqueArr } from 'app/commons/common';
-//import instance from 'assets/images/instance.svg';
-//import router from 'assets/images/router.svg';
-//import internet from 'assets/images/cloud.svg';
+import instance from 'assets/images/server-green.svg';
+import router from 'assets/images/router-green.svg';
+import internet from 'assets/images/cloud.png';
 import { Tooltip } from 'antd';
 import { INSTANCE_STATUS } from 'features/common/constants';
 

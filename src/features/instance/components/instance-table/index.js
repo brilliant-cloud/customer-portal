@@ -74,7 +74,7 @@ class InstanceTable extends React.Component {
             )
 
            */
-          console.log()
+
 
         } else if (col === 'security_groups') {
           render = (text) => {

@@ -8,6 +8,8 @@ import CreateInstanceModal from './create-instance-modal';
 import { Button } from 'antd';
 
 import commonStyles from 'features/common/styles.css';
+import {getVolumeTypes} from "app/orm/cinder/volumeType/actions";
+import {getVolumes} from "app/orm/cinder/volume/actions";
 
 class CreateInstance extends React.Component {
   constructor(props) {
@@ -26,10 +28,11 @@ class CreateInstance extends React.Component {
   };
 
   handleCreate = () => {
+
     this.props.dispatch(getNetworks());
     this.props.dispatch(getKeypairs());
     this.props.dispatch(getSecurityGroups());
-
+    this.props.dispatch(getVolumes());
     this.handleModalVisible(true);
   };
 

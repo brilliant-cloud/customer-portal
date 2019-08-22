@@ -56,6 +56,7 @@ class Image extends React.Component {
     //
     let data = [];
     let images = this.props.images;
+    console.log(images)
     images.items.forEach(imageId => {
       data.push(images.itemsById[imageId]);
     });

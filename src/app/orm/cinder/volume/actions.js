@@ -1,6 +1,6 @@
 import { combineURL, getToken, ormItems } from 'app/commons/common';
 
-// 获取特定硬盘的详细信息
+
 const getVolumeSuccess = (volume) => {
   return {
     type: 'GET_VOLUME_SUCCESS',
@@ -28,7 +28,7 @@ const getVolume = (volume) => {
 
 
 
-// 获取所有硬盘的详细信息
+
 const getVolumesSuccess = (volumes) => {
   let [items, itemsById] = volumes;
   return {
@@ -55,7 +55,9 @@ const getVolumes = () => {
         'X-Auth-Token': scopedToken
       }
     }).then((res) => {
+
       res.json().then((resBody) => {
+        console.log(resBody.volumes);
         dispatch(getVolumesSuccess(ormItems(resBody.volumes)));
       }).catch((err) => {
         console.log(err);
@@ -68,7 +70,7 @@ const getVolumes = () => {
 
 
 
-//
+
 const pollVolumeSuccess = (volume) => {
   return {
     type: 'POLL_VOLUME_SUCCESS',
@@ -107,7 +109,7 @@ const pollVolume = (volumeID) => {
 
 
 
-// 创建硬盘
+
 const createVolumeSuccess = (volume) => {
   return {
     type: 'CREATE_VOLUME_SUCCESS',
@@ -116,9 +118,11 @@ const createVolumeSuccess = (volume) => {
 };
 
 const createVolume = (reqBody) => {
+  console.log(reqBody);
   return (dispatch) => {
     let scopedToken = localStorage.getItem('scopedToken');
     let url = combineURL('createVolume');
+    console.log(reqBody);
     reqBody = {
       'volume': reqBody
     };
@@ -140,7 +144,7 @@ const createVolume = (reqBody) => {
 
 
 
-// 更新硬盘的信息
+
 const updateVolumeSuccess = (volume) => {
   return {
     type: 'UPDATE_VOLUME_SUCCESS',
@@ -174,7 +178,7 @@ const updateVolume = (reqBody, selectedVolume) => {
 
 
 
-// 扩充硬盘容量
+
 const resizeVolumeSuccess = () => {
   return {
     type: 'RESIZE_VOLUME_SUCCESS',
@@ -210,7 +214,7 @@ const resizeVolume = (reqBody, selectedVolume) => {
 
 
 
-// 删除硬盘
+
 const deleteVolumeSuccess = () => {
   return {
     type: 'DELETE_VOLUME_SUCCESS',
@@ -244,7 +248,7 @@ const deleteVolume = (selectedVolumes) => {
 
 
 
-// 轮询硬盘的删除状态
+
 const pollVolumeIfDeletedSuccess = (volume) => {
   return {
     type: 'POLL_VOLUME_IF_DELETED_SUCCESS',
@@ -261,6 +265,7 @@ const pollVolumeIfDeletedFailure = (volume) => {
 
 const pollVolumeIfDeleted = (volume) => {
   return (dispatch) => {
+    console.log("Polling");
     let scopedToken = getToken();
     let url = combineURL('getVolumes');
     let intervalID = setInterval(() => {

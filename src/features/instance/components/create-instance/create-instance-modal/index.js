@@ -19,6 +19,8 @@ import {
 } from 'features/instance/actions';
 
 import styles from './style/index.css'
+import Volume from "features/volume";
+import VolumeSelection from './Volume';
 
 const Step = Steps.Step;
 
@@ -58,8 +60,8 @@ class CreateInstanceModal extends React.Component {
   render() {
     const { current } = this.state;
     const steps = [{
-      title: 'Image',
-      content: <Image />
+      title: 'Volume',
+      content: <VolumeSelection/>
     }, {
       title: 'Flavor',
       content: <Flavor />

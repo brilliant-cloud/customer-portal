@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Modal, Form, Input, Radio, Spin } from 'antd';
-import { createVolume } from 'app/orm/cinder/volume/actions';
+import { createVolume , getVolumes} from 'app/orm/cinder/volume/actions';
 import { selectVolumeTypes } from 'app/selectors/orm/cinder';
 
 const RadioGroup = Radio.Group;
@@ -24,8 +24,10 @@ class CustomizeForm extends React.Component {
   };
 
   render() {
+
     const { getFieldDecorator } = this.props.form;
 
+    console.log(getFieldDecorator)
 
     if (this.props.volumeTypes.loading) {
       return (
@@ -83,10 +85,12 @@ class CustomizeForm extends React.Component {
 }
 
 function mapStateToProps(state) {
+  console.log(state)
   return {
     volumeTypes: selectVolumeTypes(state)
   }
 }
 
 let CreateVolumeModal = Form.create()(CustomizeForm);
+
 export default connect(mapStateToProps, null)(CreateVolumeModal);
