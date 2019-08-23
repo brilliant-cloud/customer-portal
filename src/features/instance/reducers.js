@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 const initialCreateState = {
   choosedNetworks: [],
   choosedSecurityGroup: [],
-  choosedImage: '',
+  choosedVolume: '',
   choosedFlavor: '',
   choosedKeypair: '',
   filledInstance: '',
@@ -35,10 +35,10 @@ const create = (state = initialCreateState, action) => {
       }
     }
 
-    case 'CHOOSED_IMAGE': {
+    case 'CHOOSED_VOLUME': {
       return {
         ...state,
-        choosedImage: action.id
+        choosedVolume: action.id
       }
     }
 

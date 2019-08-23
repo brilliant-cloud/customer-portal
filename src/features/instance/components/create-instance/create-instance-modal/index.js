@@ -12,7 +12,7 @@ import { createServer } from 'app/orm/nova/server/actions';
 import {
   choosedNetworks,
   choosedSecurityGroup,
-  choosedImage,
+  choosedVolume,
   choosedFlavor,
   choosedKeypair,
   filledInstance,
@@ -40,7 +40,7 @@ class CreateInstanceModal extends React.Component {
 
   handleCancel = () => {
     this.props.dispatch(choosedSecurityGroup([]));
-    this.props.dispatch(choosedImage(''));
+    this.props.dispatch(choosedVolume(''));
     this.props.dispatch(choosedFlavor(''));
     this.props.dispatch(choosedKeypair(''));
     this.props.dispatch(filledInstance(''));

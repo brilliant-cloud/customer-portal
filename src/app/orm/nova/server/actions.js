@@ -150,12 +150,18 @@ const createServer = (serverBody) => {
     })
   });
 
-  console.log(serverBody)
+  console.log(serverBody);
   let server = {
     "name": serverBody.filledInstance,
-    "imageRef": serverBody.choosedImage,
     "flavorRef": serverBody.choosedFlavor,
-    "networks": networks
+    "networks": networks,
+    "block_device_mapping_v2": [{
+      "boot_index": "0",
+      "uuid": serverBody.choosedVolume,
+      "source_type": "volume",
+      "destination_type": "volume",
+      "delete_on_termination": true
+    }]
   };
 
   if (serverBody.choosedKeypair) {

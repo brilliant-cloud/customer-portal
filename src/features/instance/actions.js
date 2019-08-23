@@ -8,8 +8,9 @@ export const removeNetwork = (id) => ({
   id,
 });
 
-export const choosedImage = (id) => ({
-  type: 'CHOOSED_IMAGE',
+export const choosedVolume = (id) => ({
+
+  type: 'CHOOSED_VOLUME',
   id
 });
 
