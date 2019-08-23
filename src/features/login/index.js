@@ -16,9 +16,6 @@ class NormalLoginForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleTry = () => {
-    this.props.dispatch(login({'username': 'admin', 'password': 'admin'}))
-  };
 
   handleSubmit(e) {
     e.preventDefault();

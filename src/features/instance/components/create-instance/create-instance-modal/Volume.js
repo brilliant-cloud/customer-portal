@@ -36,6 +36,7 @@ class VolumeSelection extends React.Component{
                 })
             }
         });
+        console.log(VOLUME_TABLE_COLUMN);
 
         let data = [];
 

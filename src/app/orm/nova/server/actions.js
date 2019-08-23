@@ -150,6 +150,7 @@ const createServer = (serverBody) => {
     })
   });
 
+  console.log(serverBody)
   let server = {
     "name": serverBody.filledInstance,
     "imageRef": serverBody.choosedImage,
