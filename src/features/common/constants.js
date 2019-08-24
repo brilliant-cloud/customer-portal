@@ -68,10 +68,10 @@ const INSTANCE_TABLE_COLUMN = [
 ];
 
 const INSTANCE_FIELD = {
-  "OS-EXT-STS:task_state": "Transition state",
-  "addresses": "IP Address",
-  "image": "Mirror",
-  "OS-EXT-STS:vm_state": "VM status",
+  "OS-EXT-STS:task_state": "Transition State",
+  "addresses": "IP",
+  "image": "Image",
+  "OS-EXT-STS:vm_state": "Status",
   "OS-EXT-SRV-ATTR:instance_name": "Host Instance Name",
   "OS-SRV-USG:launched_at": "Start Time",
   "flavor": "Specification",

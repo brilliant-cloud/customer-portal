@@ -34,6 +34,8 @@ class EditInstanceModal extends React.Component {
         visible={this.props.visible}
         onCancel={this.handleCancel}
         onOk={this.handleOk}
+        okText="Ok"
+        cancelText="Cancel"
       >
         <Form>
           <FormItem label="Name：">

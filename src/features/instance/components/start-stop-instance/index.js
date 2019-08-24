@@ -118,6 +118,8 @@ class StartStopOperate extends React.Component {
           visible={this.state.operate.visible}
           onOk={this.handleOperateOk}
           onCancel={this.handleOperateCancel}
+          okText="Ok"
+          cancelText="Cancel"
         >
           <p>{this.state.operate.notice}</p>
         </Modal>

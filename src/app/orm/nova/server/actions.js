@@ -249,7 +249,6 @@ const fetchConsoleOutput = (serverID) => {
   }
 };
 
-// 云主机操作
 const operateServerSuccess = () => {
   return {
     type: 'OPERATE_STOP_SERVER_SUCCESS',
@@ -290,7 +289,7 @@ const operateServer = (type, serversID) => {
   }
 };
 
-// 轮询云主机详细信息
+
 const pollOperateServerSuccess = (server) => {
   return {
     type: 'POLL_OPERATE_SERVER_SUCCESS',

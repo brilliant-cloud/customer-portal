@@ -29,6 +29,8 @@ class DestroyInstanceModal extends React.Component {
         visible={this.props.visible}
         onCancel={this.handleCancel}
         onOk={this.handleOk}
+        okText={"Destroy"}
+        cancelText={"Cancel"}
       >
         <Alert
           message={`Prompt：${destroyDesc}`}
