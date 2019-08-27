@@ -23,7 +23,7 @@ class HomeHeader extends React.Component {
     let isLogged = this.props.login.isLogged;
     return (
       <div>
-          <span className={styles.logo}>42cloud</span>
+          <span className={styles.logo}>Brilliant Cloud</span>
           <Menu
             className={styles.menu}
             theme="dark"
