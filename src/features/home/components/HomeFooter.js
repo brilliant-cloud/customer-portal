@@ -3,7 +3,7 @@ import React from 'react';
 function HomeFooter() {
   return (
     <div style={{textAlign: 'center'}}>
-      Web Design ©2017 Created by 42cloud
+      Developed By InterCloud Software Engineering Team
     </div>
   )
 }
