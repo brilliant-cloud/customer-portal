@@ -53,11 +53,14 @@ class NetworkTable extends React.Component {
 
       let data = [];
       let networks = this.props.networks;
+
       networks.items.forEach(id => {
         data.push(networks.itemsById[id]);
       });
+      console.log(networks);
 
       return (
+
         <Table
           columns={columns}
           dataSource={data}

@@ -14,7 +14,7 @@ class MoreOperate extends React.Component {
     this.state = {
       editVisible: false,
       destroyVisible: false,
-    }
+    };
   }
 
   handleMenuCancel = (modal, visible) => {
