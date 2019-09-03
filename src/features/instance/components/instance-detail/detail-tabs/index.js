@@ -52,6 +52,9 @@ class DetailTabs extends React.Component {
         <TabPane tab="Console Log" key="log">
           <ConsoleLog />
         </TabPane>
+        <TabPane tab="Console Log" key="console">
+          <div>{this.props.instanceID}</div>
+        </TabPane>
 
         <TabPane tab="Monitor" key="monitor">
           <RadioGroup
