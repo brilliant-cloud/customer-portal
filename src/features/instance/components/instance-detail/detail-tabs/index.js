@@ -55,21 +55,6 @@ class DetailTabs extends React.Component {
         <TabPane tab="Console Log" key="console">
           <div>{this.props.instanceID}</div>
         </TabPane>
-
-        <TabPane tab="Monitor" key="monitor">
-          <RadioGroup
-            defaultValue="1hour"
-            onChange={this.handleChangeRadio}
-          >
-            <RadioButton value="1hour">Last Hour</RadioButton>
-            <RadioButton value="6hours">Last Six Hours</RadioButton>
-            <RadioButton value="1day">Last Day</RadioButton>
-            <RadioButton value="1month">Last Month</RadioButton>
-            <RadioButton value="6months">Last Six Months</RadioButton>
-            <RadioButton value="1year">Last Year</RadioButton>
-          </RadioGroup>
-          <Monitor timeSpan={this.state.timeSpan} />
-        </TabPane>
       </Tabs>
     )
   }
