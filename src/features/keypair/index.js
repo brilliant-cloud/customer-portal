@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import KeypairTable from 'features/keypair/components/KeypairTable';
 import { getKeypairs } from 'app/orm/nova/keypair/actions';
+import CreateKeyPair from "features/keypair/components/CreateKeyPair";
 
 class Keypair extends React.Component {
   constructor(props) {
@@ -13,8 +14,15 @@ class Keypair extends React.Component {
   }
 
   render() {
+
     return (
-      <KeypairTable />
+        <div>
+
+          <KeypairTable/>
+
+
+
+        </div>
     )
   }
 }

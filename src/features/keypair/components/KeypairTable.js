@@ -5,6 +5,7 @@ import { Table, Spin } from 'antd';
 import { selectKeypairs } from 'app/selectors/orm/nova';
 import { KEYPAIR_TABLE_COLUMN, KEYPAIR_FIELD } from 'features/common/constants';
 import commonStyles from 'features/common/styles.css';
+import CreateKeyPair from "features/keypair/components/CreateKeyPair";
 
 class KeypairTable extends React.Component {
   constructor(props) {
@@ -47,6 +48,9 @@ class KeypairTable extends React.Component {
       return (
         <div className={commonStyles.wrapper}>
 
+          <CreateKeyPair/>
+
+          <br/>
           <Table
             columns={columns}
             bordered

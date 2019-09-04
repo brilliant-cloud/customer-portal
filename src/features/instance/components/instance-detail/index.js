@@ -24,7 +24,6 @@ class InstanceDetail extends React.Component {
   render() {
     return (
       <div className={styles.wrapper}>
-        <DetailOverview />
         <DetailTabs instanceID={this.props.match.params.id} />
       </div>
     )
