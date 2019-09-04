@@ -1,5 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import axios from 'axios';
+
 import Iframe from 'react-iframe';
 import {Button} from "antd";
 
@@ -55,24 +57,38 @@ class ConsoleWindow extends React.Component{
                  console.log(error)
              })
 
+
+
     }
 
 
     render(){
         const {show} = this.state;
-        let button;
+        let frame;
         if (show) {
-            button = <Iframe url={this.state.frameLink}
+            frame = <Iframe  src={this.state.frameLink}
                              width="100%"
-                             height="600"
+                             height="800"
+                             tabIndex={0}
+                             scrolling="yes"
+                             allowFullScreen="yes"
+                             display="initial"
+
+
             />;
+
+
         }
+        console.log(frame);
 
         return(
             <div>
-                {button}
-            </div>
 
+                {frame}
+
+
+                Click On Blue Status Bar to Activate Terminal
+            </div>
 
         )
     }
