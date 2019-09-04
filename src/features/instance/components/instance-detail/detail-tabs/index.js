@@ -1,15 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Tabs, Radio } from 'antd';
+import { Tabs } from 'antd';
 import ConsoleLog from 'components/console-log';
-import Monitor from 'components/monitor';
 import { getMonitor } from 'app/orm/influxdb/monitor/actions';
 import { MONITOR_TIME_SPAN, MONITOR_TIME_STEP } from 'features/common/constants';
-import { filterTimeSpan } from 'features/instance/actions';
 import styles from './index.css';
+import ConsoleWindow from "./ConsoleWindow";
 
-const RadioButton = Radio.Button;
-const RadioGroup = Radio.Group;
 const TabPane = Tabs.TabPane;
 
 class DetailTabs extends React.Component {
@@ -32,14 +29,6 @@ class DetailTabs extends React.Component {
     }
   };
 
-  handleChangeRadio = (event) => {
-    event.preventDefault();
-    // this.props.dispatch(filterTimeSpan(event.target.value));
-    this.setState({
-      timeSpan: event.target.value
-    });
-    this.handleTabClick('monitor', event.target.value);
-  };
 
   render() {
     return (
@@ -49,11 +38,11 @@ class DetailTabs extends React.Component {
         onTabClick={this.handleTabClick}
         className={styles.detailtabs}
       >
-        <TabPane tab="Console Log" key="log">
-          <ConsoleLog />
+        <TabPane tab="Console" key="log">
+         <ConsoleWindow instanceID={this.props.instanceID}/>
         </TabPane>
         <TabPane tab="Console Log" key="console">
-          <div>{this.props.instanceID}</div>
+          <ConsoleLog />
         </TabPane>
       </Tabs>
     )
