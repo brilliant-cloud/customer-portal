@@ -50,6 +50,7 @@ class MoreOperate extends React.Component {
         <Menu.Item
           key="edit"
           disabled={choosedInstances.length !== 1}
+          disabled={true}
         >
           <i className="fa fa-trash">Edit Cloud Host</i>
         </Menu.Item>
@@ -57,6 +58,7 @@ class MoreOperate extends React.Component {
         <Menu.Item
           key="create"
           disabled={choosedInstances.length !== 1}
+          disabled={true}
         >
           <i className="fa fa-trash">
             Make a Mirror</i>
@@ -86,6 +88,7 @@ class MoreOperate extends React.Component {
         <Menu.Item
           key="destroy"
           disabled={choosedInstances.length === 0}
+          disabled={true}
         >
           <i className="fa fa-trash">Destroy</i>
         </Menu.Item>
