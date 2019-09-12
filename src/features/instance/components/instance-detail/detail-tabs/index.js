@@ -6,6 +6,7 @@ import { getMonitor } from 'app/orm/influxdb/monitor/actions';
 import { MONITOR_TIME_SPAN, MONITOR_TIME_STEP } from 'features/common/constants';
 import styles from './index.css';
 import ConsoleWindow from "./ConsoleWindow";
+import DetailOverview from '../DetailOverview';
 
 const TabPane = Tabs.TabPane;
 
@@ -38,12 +39,16 @@ class DetailTabs extends React.Component {
         onTabClick={this.handleTabClick}
         className={styles.detailtabs}
       >
+        <TabPane tab="Details" key="details">
+          <DetailOverview />
+        </TabPane>
         <TabPane tab="Console" key="log">
          <ConsoleWindow instanceID={this.props.instanceID}/>
         </TabPane>
         <TabPane tab="Console Log" key="console">
           <ConsoleLog />
         </TabPane>
+
       </Tabs>
     )
   }

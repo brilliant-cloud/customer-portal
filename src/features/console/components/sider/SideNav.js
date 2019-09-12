@@ -71,15 +71,7 @@ class SideNav extends React.Component {
             key="net"
             title={<i className={(styles.fa) + " " + "fa fa-sitemap fa-lg"}>Networks</i>}
           >
-            <Menu.Item key="networks">
-                <Link to="/console/networks">
-                  <div
-                    className={styles.item}
-                  >
-                    Networks
-                  </div>
-                </Link>
-            </Menu.Item>
+          
 
             <Menu.Item key="routers">
               <Link to="/console/routers">
@@ -102,13 +94,7 @@ class SideNav extends React.Component {
             key="security"
             title={<i className={(styles.bolt) + " " + "fa fa-bolt fa-lg"}>Security</i>}
           >
-            <Menu.Item key="secgroup">
-              <div
-                className={styles.item}
-              >
-                Security Group
-              </div>
-            </Menu.Item>
+            
 
             <Menu.Item key="keypairs">
               <Link to="/console/keypairs">

@@ -22,9 +22,11 @@ class InstanceDetail extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <div className={styles.wrapper}>
         <DetailTabs instanceID={this.props.match.params.id} />
+
       </div>
     )
   }
