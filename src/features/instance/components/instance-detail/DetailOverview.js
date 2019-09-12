@@ -32,9 +32,6 @@ class DetailOverview extends React.Component {
       let serverInfo = this.props.server.data;
 
 
-      let imageName = this.props.images.itemsById[serverInfo.image.id].name;
-
-
       let networkArrs = [];
       let addressKeys = Object.keys(serverInfo.addresses);
       addressKeys.forEach(key => {
@@ -103,8 +100,7 @@ class DetailOverview extends React.Component {
               <dd>{INSTANCE_STATUS[serverInfo.status]}</dd>
               <dt>{INSTANCE_FIELD['OS-EXT-AZ:availability_zone']}</dt>
               <dd>{serverInfo['OS-EXT-AZ:availability_zone']}</dd>
-              <dt>{INSTANCE_FIELD['image']}</dt>
-              <dd>{imageName}</dd>
+             
             </dl>
           </div>
 

@@ -39,7 +39,7 @@ class ConsoleWindow extends React.Component{
         };
         const proxyurl = "https://cors-anywhere.herokuapp.com/";
         const url = "http://118.67.215.10:8774/v2.1/servers/"+this.props.instanceID+"/action";
-        console.log(url);
+       
          axios.post(proxyurl + url,postData, header)
             .then((response)=>{
                 if (response) {
@@ -47,7 +47,7 @@ class ConsoleWindow extends React.Component{
                     this.setState({
                         frameLink: response.data.console.url
                     });
-                    console.log(this.state.frameLink);
+                
                     this.setState({
                         show:true
                     })
@@ -79,7 +79,7 @@ class ConsoleWindow extends React.Component{
 
 
         }
-        console.log(frame);
+      
 
         return(
             <div>
