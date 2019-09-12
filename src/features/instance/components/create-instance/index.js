@@ -48,6 +48,7 @@ class CreateInstance extends React.Component {
           icon="plus"
           onClick={this.handleCreate}
           className={commonStyles.button}
+          disabled="true"
         >
             Create
         </Button>

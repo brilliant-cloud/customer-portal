@@ -50,12 +50,12 @@ class NetworkTopology extends React.Component {
 
         let serverNetworks = Object.keys(server.addresses);
 
-        // 虚拟机第一个网络在所有网络列表中的数组索引
+ 
         let firstNetworkIndex = networksData.findIndex(network => {
           return network.name === serverNetworks[0];
         });
 
-        // NICs, 不包含Line的X，Y
+       
         let serverNics = [];
         serverNetworks.forEach(serverNetwork => {
           server.addresses[serverNetwork].forEach(nic => {
@@ -68,7 +68,6 @@ class NetworkTopology extends React.Component {
           })
         });
 
-        // 虚拟机节点的Y位置
         let serverPostY;
         if (serverIndex === 0) {
           serverPostY = serverMargin;
@@ -76,17 +75,17 @@ class NetworkTopology extends React.Component {
           serverPostY = preServer.PostY + preServer.height + serverMargin;
         }
 
-        // 虚拟机节点的高度
+  
         let serverHeight = nicLineOffsetTop + nicLineOffsetBottom +
           serverNics.length * nicLineHeight + (serverNics.length - 1) * nicLineSep;
 
 
-        // 虚拟机节点的X位置
+   
         let serverPostX = firstNetworkIndex * netLineSep +
           (firstNetworkIndex + 1) * netLineWidth +
           (netLineSep - instanceWidth) / 2;
 
-        // Nics, 计算X，Y
+      
         let newServerNics = [];
         serverNics.forEach((serverNic, nicIndex) => {
           let networkIndex = networksData.findIndex(network => {
@@ -114,7 +113,7 @@ class NetworkTopology extends React.Component {
           });
         });
 
-        // 构造最终的servers
+
         serversTopology.push({
           "name": server.name,
           "id": server.id,
@@ -131,7 +130,7 @@ class NetworkTopology extends React.Component {
       let nicsArr = [];
       serversTopology.forEach((server, serverIndex) => {
 
-        // 虚拟机所有网卡
+        
         let instanceNicsArr = [];
         let isLeftNic = true;
         server.nics.forEach((nic, nicIndex) => {
@@ -158,7 +157,7 @@ class NetworkTopology extends React.Component {
           )
         });
 
-        // 虚拟机节点
+   
         instancesArr.push(
           <div
             className="instance"
@@ -205,7 +204,7 @@ class NetworkTopology extends React.Component {
           </div>
         );
 
-        // 虚拟机的所有网卡连线节点
+        
         server.nics.forEach(nic => {
           nicsArr.push(
             <div
@@ -250,7 +249,7 @@ class NetworkTopology extends React.Component {
       });
 
 
-      // 所有网络
+    
       let networksArr = [];
       let lastServer = serversTopology[serversTopology.length - 1];
       let networkHeight = lastServer.PostY + lastServer.height + serverMargin;
