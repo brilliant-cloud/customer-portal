@@ -73,7 +73,8 @@ class Volume extends React.Component {
             className={commonStyles.button}
             onClick={this.handleButtonClick}
             type="primary"
-            icon="plus">
+            icon="plus"
+            >
 
             Create
           </Button>
