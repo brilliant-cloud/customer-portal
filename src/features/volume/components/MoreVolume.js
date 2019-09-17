@@ -20,7 +20,9 @@ class MoreVolume extends React.Component {
     const menu = (
       <Menu
         className={commonStyles.menu}
-        onClick={this.handleMenuClick}>
+        onClick={this.handleMenuClick}
+        disabled={true}
+        >
         <Menu.Item
           key="mount"
           disabled={true}
@@ -38,6 +40,7 @@ class MoreVolume extends React.Component {
         <Menu.Item
           key="resize"
           disabled={choosedVolumes.length !== 1}
+          disabled={true}
         >
           <i className="fa fa-expand">Expand</i>
         </Menu.Item>
@@ -45,6 +48,7 @@ class MoreVolume extends React.Component {
         <Menu.Item
           key="modify"
           disabled={choosedVolumes.length !== 1}
+          disabled={true}
         >
           <i className="fa fa-pencil">Modify</i>
         </Menu.Item>
@@ -52,6 +56,7 @@ class MoreVolume extends React.Component {
         <Menu.Item
           key="delete"
           disabled={choosedVolumes.length < 1}
+          disabled={true}
         >
           <i className="fa fa-trash">Delete</i>
         </Menu.Item>

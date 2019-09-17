@@ -38,21 +38,10 @@ class DetailTabs extends React.Component {
             <SubnetTable />
           </TabPane>
 
-          <TabPane tab="port" key="port">
+          <TabPane tab="porttable" key="port">
             <PortTable />
           </TabPane>
 
-          <TabPane tab="settings" key="setting">
-            configuration
-          </TabPane>
-
-          <TabPane tab="graph" key="graph">
-            <Graph />
-          </TabPane>
-
-          <TabPane tab="operation log" key="log">
-            Operation Log
-          </TabPane>
         </Tabs>
     )
   }

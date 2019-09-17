@@ -73,12 +73,15 @@ class Volume extends React.Component {
             className={commonStyles.button}
             onClick={this.handleButtonClick}
             type="primary"
-            icon="plus">
+            icon="plus"
+            disabled={true}
+            >
 
             Create
           </Button>
 
           <MoreVolume
+            
             handleClick={this.handleModalVisible}
           />
         </div>
