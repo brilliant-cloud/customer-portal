@@ -14,7 +14,7 @@
     "classnames": "^2.2.5",
     "echarts-for-react": "^1.4.4",
     "filesize": "^3.5.10",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.19",
     "moment": "^2.18.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
